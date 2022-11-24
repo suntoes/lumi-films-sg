@@ -1,5 +1,4 @@
 import {
-  AspectRatio,
   Box,
   Button,
   Container,
@@ -72,9 +71,8 @@ const RecentWorks = () => (
           justify="end"
         >
           {[0, 1, 2, 3, 4].map(i => (
-            <Box overflow="hidden" maxW={{ md: '11%' }} borderRadius={10}>
+            <Box key={i} overflow="hidden" maxW={{ md: '11%' }} borderRadius={10}>
               <Image
-                key={i}
                 src="images/asset-1.jpg"
                 _hover={{ transform: 'scale(1.2)' }}
                 transition="all .5s"

@@ -17,7 +17,7 @@ const FooterMenu = ({ title, path, menus }) => (
   <Stack spacing="0">
     <Text my="0.5rem">{title}</Text>
     {menus.map(t => (
-      <NextLink href={path + t.toLowerCase().replace(/\n/, '-')} scroll={false}>
+      <NextLink key={t} href={path + t.toLowerCase().replace(/\n/, '-')} scroll={false}>
         <Link fontSize="sm" opacity="0.5">
           {t}
         </Link>

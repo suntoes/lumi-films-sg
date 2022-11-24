@@ -6,7 +6,6 @@ import {
   Flex,
   Spacer,
   Stack,
-  Text
 } from '@chakra-ui/react'
 
 import Paragraph from './paragraph'

@@ -1,18 +1,13 @@
 import {
   AspectRatio,
   Box,
-  Button,
   Container,
   Image,
   Heading,
-  Flex,
-  Spacer,
   Stack,
   Slider,
   SliderTrack,
   SliderThumb,
-  SliderMark,
-  Text
 } from '@chakra-ui/react'
 
 import { FaRegLightbulb, FaVideo, FaLaptopCode } from 'react-icons/fa'
@@ -29,36 +24,37 @@ const Process = () => (
     py={32}
     maxW="container.xl"
   >
-    <Stack direction="row" align="end" w={175} spacing={0}>
+    <Stack 
+      direction={{base: "column", md: "row"}} 
+      align={{md: "end"}} 
+      w={{md: 175}} 
+      spacing={0}>
       <Heading
         as="h4"
         w={{ md: '1em' }}
         size="sm"
         whiteSpace="pre"
         mr={{ md: 2 }}
+        mb={{ base: 2, md: 0 }}
         transform={{ md: 'rotate(-90deg)' }}
       >
         Our Process
       </Heading>
-      <Slider
+     <Slider
         w={10}
         h="70%"
         display={{ base: 'none', md: 'block' }}
         defaultValue={70}
         orientation="vertical"
       >
-        <SliderMark value={75} ml={12} opacity={0.5}>
-          <FaRegLightbulb fontSize={92} />
-        </SliderMark>
-        <SliderMark value={37.5} ml={12} opacity={0.5}>
-          <FaVideo fontSize={92} />
-        </SliderMark>
-        <SliderMark value={0} ml={12}>
-          <FaLaptopCode fontSize={92} />
-        </SliderMark>
-        <SliderTrack w={3} bg="gray" />
-        <SliderThumb bg="teal" borderRadius={0} w={3} h={20} />
+       <SliderTrack w={3} bg="gray" />
+        <SliderThumb bg="teal" w={3} h={20} />
       </Slider>
+      <Stack h={{md: "70%"}} pl={{base: 0, md: 3}} direction={{base: "row", md: "column"}} justify="space-between">
+        <FaRegLightbulb fontSize={92} opacity={0.5}/>
+        <FaVideo fontSize={92} opacity={0.5}/>
+        <FaLaptopCode fontSize={92} />
+      </Stack>
     </Stack>
 
     <AspectRatio
@@ -84,7 +80,7 @@ const Process = () => (
       <Heading as="h2" size={{ base: 'sm', md: 'md', lg: 'lg' }}>
         Create
       </Heading>
-      <Box maxW={300}>
+      <Box maxW={{md: 300}}>
         <Paragraph>
           Our inhouse editing team will start working on your project once we
           finish filming. We will put in the time and effort to craft your video

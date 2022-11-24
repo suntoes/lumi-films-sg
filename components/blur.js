@@ -1,4 +1,4 @@
-import { Icon, IconProps, useBreakpointValue } from '@chakra-ui/react'
+import { Icon } from '@chakra-ui/react'
 
 const Blur = props => (
   <Icon

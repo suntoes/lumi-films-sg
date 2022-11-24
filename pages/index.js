@@ -1,7 +1,3 @@
-import NextLink from 'next/link'
-import Image from 'next/image'
-
-import { Heading } from '@chakra-ui/react'
 
 import Hero from '../components/hero'
 import Aim from '../components/aim'

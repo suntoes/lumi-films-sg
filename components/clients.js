@@ -1,5 +1,4 @@
 import { Box, Container, Image, Heading, Stack } from '@chakra-ui/react'
-import Paragraph from './paragraph'
 
 const Clients = () => (
   <Box

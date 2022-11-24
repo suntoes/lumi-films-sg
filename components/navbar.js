@@ -5,18 +5,14 @@ import {
   Box,
   Link,
   Stack,
-  Heading,
-  Flex,
   Menu,
   MenuItem,
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoPersonCircleOutline } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href

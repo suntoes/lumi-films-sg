@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Image, Text, useColorModeValue } from '@chakra-ui/react'
+import { Image, Text } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
@@ -29,7 +29,7 @@ const Logo = props => (
             xl: 'blue'
           }}
         >
-          |||
+          under development
         </Text>
       </LogoBox>
     </a>

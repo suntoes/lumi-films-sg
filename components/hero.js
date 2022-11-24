@@ -38,7 +38,7 @@ const Hero = () => (
       />
     </Container>
     <video
-      autoplay="autoplay"
+      autoPlay="autoplay"
       loop="loop"
       muted="muted"
       preload="auto"
