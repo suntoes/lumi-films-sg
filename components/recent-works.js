@@ -52,7 +52,7 @@ const RecentWorks = () => (
           <Heading as="h5" fontWeight={400} fontSize="1.5rem">
             Talking Textiles
           </Heading>
-          <Box w={{ md: '80%' }} mt={{ base: '2rem', md: '4rem' }} mb={'2rem'}>
+          <Box w={{ md: '80%' }} mt={{ base: '2rem', md: '4rem' }} mb={'1rem'}>
             <Paragraph>
               Lumi Films is a film production company in Singapore. We strive
               not only create engaging content, but to also evoke emotions,

@@ -63,7 +63,7 @@ const Footer = () => {
   return (
     <Box w="full">
       <Container px={5} py={32} w="100%" maxW="container.xl">
-        <Heading as="h3" size={{ base: 'xs', md: 'sm', lg: 'md' }} mb={5}>
+        <Heading as="h3" size={{ base: 'xs', md: 'sm', lg: 'md' }} mb="1rem">
           Ready to create something remarkable?
         </Heading>
         <Button variant="teal">Get in touch</Button>

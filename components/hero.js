@@ -25,6 +25,7 @@ const Hero = () => (
         color="white"
         size={{ base: 'md', md: 'lg', lg: 'xl' }}
         filter="drop-shadow(0 0 5px rgba(0, 0, 0, 0.25))"
+        mb="1rem"
       >
         We help businesses with video marketing
       </Heading>
