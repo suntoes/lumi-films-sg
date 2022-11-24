@@ -14,12 +14,23 @@ const LogoBox = styled.span`
   }
 `
 
-const Logo = () => (
+const Logo = props => (
   <Link href="/" scroll={false}>
     <a>
       <LogoBox>
-        <Image boxSize="50px" src={"images/logo.png"} />
-        <Text position="absolute" color={{base: "red", sm: "orange", md: "yellow", lg: "green", xl: "blue"}} >|||</Text>
+        <Image boxSize={50} src={'images/logo.png'} {...props} />
+        <Text
+          position="absolute"
+          color={{
+            base: 'red',
+            sm: 'orange',
+            md: 'yellow',
+            lg: 'green',
+            xl: 'blue'
+          }}
+        >
+          |||
+        </Text>
       </LogoBox>
     </a>
   </Link>

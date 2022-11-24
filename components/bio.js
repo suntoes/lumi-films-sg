@@ -18,10 +18,8 @@ export const ParentBioYear = styled.div`
   margin-right: 1em;
 `
 
-export const BioYear = ({children}) => (
+export const BioYear = ({ children }) => (
   <ParentBioYear>
-    <ChildBioYear>
-      {children}
-    </ChildBioYear>
+    <ChildBioYear>{children}</ChildBioYear>
   </ParentBioYear>
 )

@@ -12,7 +12,11 @@ export default function Chakra({ cookies, children }) {
       : localStorageManager
 
   return (
-    <ChakraProvider theme={theme} colorModeManager={colorModeManager} cssVarsRoot="body">
+    <ChakraProvider
+      theme={theme}
+      colorModeManager={colorModeManager}
+      cssVarsRoot="body"
+    >
       {children}
     </ChakraProvider>
   )

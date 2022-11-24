@@ -22,11 +22,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   return (
     <NextLink href={href} passHref scroll={false}>
-      <Link
-        color={active ? 'teal' : 'white'}
-        target={target}
-        {...props}
-      >
+      <Link color={active ? 'teal' : 'white'} target={target} {...props}>
         {children}
       </Link>
     </NextLink>
