@@ -33,7 +33,7 @@ const Main = ({ children, router }) => {
         <title>Lumi Films | Video Production</title>
       </Head>
 
-      <Blur position="fixed" opacity={0.8} style={{ filter: 'blur(400px)' }} />
+      <Blur position="fixed" opacity={0.8} style={{ filter: 'blur(60px) opacity(0.6)' }} />
 
       <NavBar path={router.asPath} />
       {children}

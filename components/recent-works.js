@@ -35,8 +35,9 @@ const RecentWorks = () => (
           w={{ base: '100%', md: 400, lg: 450, lg: 500 }}
           pb="1rem"
         >
-          <Box overflow="hidden" borderRadius={10}>
+          <Box w="100%" overflow="hidden" borderRadius={10}>
             <Image
+              w="100%"
               _hover={{ transform: 'scale(1.2)' }}
               transition="all .5s"
               src="images/asset-1.jpg"
