@@ -9,7 +9,7 @@ import {
   Text
 } from '@chakra-ui/react'
 
-import Paragraph from './paragraph'
+import Paragraph from '../components/paragraph'
 
 const RecentWorks = () => (
   <Box
@@ -20,7 +20,8 @@ const RecentWorks = () => (
     mt={-4}
     minW="100vw"
     py={32}
-    filter="drop-shadow(0 0 50px rgba(0, 0, 0, 0.5))"
+    boxShadow="0px 0px 50px rgba(0, 0, 0, 0.5)"
+    filter="drop-shadow(0 0 0 #00000000)"
   >
     <Container
       display="flex"
@@ -52,7 +53,7 @@ const RecentWorks = () => (
           <Heading as="h5" fontWeight={400} fontSize="1.5rem">
             Talking Textiles
           </Heading>
-          <Box w={{ md: '80%' }} mt={{ base: '2rem', md: '4rem' }} mb={'1rem'}>
+          <Box w={{ md: '80%' }} mt={{ base: '2rem', md: '4rem' }} mb={'3em'}>
             <Paragraph>
               Lumi Films is a film production company in Singapore. We strive
               not only create engaging content, but to also evoke emotions,

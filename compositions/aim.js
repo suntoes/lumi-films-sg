@@ -8,7 +8,8 @@ import {
   Stack,
 } from '@chakra-ui/react'
 
-import Paragraph from './paragraph'
+import Paragraph from '../components/paragraph'
+import Delayed from '../components/delayed'
 
 const Aim = () => (
   <Container
@@ -25,7 +26,11 @@ const Aim = () => (
       h={{ base: '400px', md: '600px' }}
       alignSelf="start"
     >
-      parallax image
+      <Delayed from="down">
+        <Box fontSize={64}>
+          parallax
+        </Box>
+      </Delayed>
     </Box>
     <Flex w={{ md: '50%' }} direction="column">
       <Heading
@@ -33,7 +38,9 @@ const Aim = () => (
         transform={{ md: 'translateX(-15%)' }}
         size={{ base: 'sm', md: 'md', lg: 'lg' }}
       >
+        <Delayed from="right">
         We aim to share your moments with others
+        </Delayed>
       </Heading>
       <Spacer />
       <Stack
@@ -44,6 +51,7 @@ const Aim = () => (
         spacing={5}
         alignSelf="end"
       >
+        <Delayed from="right">
         <Paragraph>
           Lumi Films is a film production company in Singapore. We strive to not
           only create engaging content, but to also evoke emotions, share unique
@@ -52,9 +60,14 @@ const Aim = () => (
             '\n\nDo you need help bringing your ideas to video? Contact us today to learn more!'
           }
         </Paragraph>
-        <Button alignSelf={{ base: 'end', md: 'start' }} variant="teal">
+        </Delayed>
+        <Box alignSelf={{base: 'end', md: 'start'}}>
+          <Delayed from="right" delay={0.2}>
+        <Button variant="teal" >
           Learn more
         </Button>
+          </Delayed>
+        </Box>
       </Stack>
     </Flex>
   </Container>

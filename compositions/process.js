@@ -12,7 +12,7 @@ import {
 
 import { FaRegLightbulb, FaVideo, FaLaptopCode } from 'react-icons/fa'
 
-import Paragraph from './paragraph'
+import Paragraph from '../components/paragraph'
 
 const Process = () => (
   <Container

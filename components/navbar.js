@@ -1,5 +1,5 @@
-import Logo from './logo'
 import NextLink from 'next/link'
+
 import {
   Container,
   Box,
@@ -12,6 +12,9 @@ import {
   IconButton,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+
+import Logo from './logo'
+import Delayed from './delayed'
 import ThemeToggleButton from './theme-toggle-button'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
@@ -37,6 +40,7 @@ const Navbar = props => {
       zIndex={2}
       {...props}
     >
+      <Delayed>
       <Container
         display="flex"
         p={5}
@@ -97,6 +101,7 @@ const Navbar = props => {
           </Menu>
         </Box>
       </Container>
+      </Delayed>
     </Box>
   )
 }

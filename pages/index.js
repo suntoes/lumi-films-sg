@@ -1,9 +1,9 @@
 
-import Hero from '../components/hero'
-import Aim from '../components/aim'
-import RecentWorks from '../components/recent-works'
-import Process from '../components/process'
-import Clients from '../components/clients'
+import Hero from '../compositions/hero'
+import Aim from '../compositions/aim'
+import RecentWorks from '../compositions/recent-works'
+import Process from '../compositions/process'
+import Clients from '../compositions/clients'
 
 import Layout from '../components/layouts/article'
 
