@@ -9,6 +9,7 @@ import {
   Text
 } from '@chakra-ui/react'
 
+import ParallaxImage from '../components/parallax-image'
 import Paragraph from '../components/paragraph'
 import Delayed from '../components/delayed'
 
@@ -21,15 +22,12 @@ const Aim = () => (
     maxW="container.xl"
   >
     <Box
-      bg="gray"
       w={{ base: '100%', md: '50%' }}
       mt={{ base: -14, md: 0 }}
       h={{ base: '400px', md: '600px' }}
       alignSelf="start"
     >
-      <Delayed from="down" fromOpaque={false}>
-        <Box fontSize={64}>parallax</Box>
-      </Delayed>
+      <ParallaxImage />
     </Box>
     <Flex w={{ md: '50%' }} direction="column">
       <Heading

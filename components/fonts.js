@@ -1,13 +1,5 @@
 const Fonts = () => (
   <style jsx global>{`
-    html,
-    body {
-      /* Safari compatibility */
-      overflow-x: hidden;
-      height: 100%;
-      width: 100%;
-      transform: translate3d(0, 0, 0);
-    }
     @font-face {
       font-family: 'NeueHaasUnicaPro';
       font-weight: 100;

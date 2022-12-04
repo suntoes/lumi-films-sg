@@ -17,12 +17,13 @@ const Hero = () => (
       justifyContent="center"
     >
       <Container
+      h="100%"
+      w="100%"
+      pt={5}
+      bg="none"
       display="flex"
       flexDirection="column"
       position="absolute"
-      bg="none"
-      h="100%"
-      w="100%"
       maxW="container.lg"
       justifyContent="center"
        >
@@ -86,12 +87,13 @@ const Hero = () => (
     filter="drop-shadow(0 0 0 #00000000)"
   >
     <Container
+      h="100%"
+      w="100%"     
+      bg="none"
+      pt={5}
       display="flex"
       flexDirection="column"
       position="absolute"
-      bg="none"
-      h="100%"
-      w="100%"
       maxW="container.lg"
       justifyContent="center"
     >
