@@ -3,6 +3,7 @@ import { Icon } from '@chakra-ui/react'
 const Blur = props => (
   <Icon
     zIndex={-1}
+    position="fixed"
     height="100vh"
     width="100vw"
     viewBox="0 0 528 560"

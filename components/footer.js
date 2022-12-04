@@ -17,8 +17,12 @@ const FooterMenu = ({ title, path, menus }) => (
   <Stack spacing="0">
     <Text my="0.5rem">{title}</Text>
     {menus.map(t => (
-      <NextLink key={t} href={path + t.toLowerCase().replace(/\n/, '-')} scroll={false}>
-        <Link fontSize="sm" opacity="0.5">
+      <NextLink
+        key={t}
+        href={path + t.toLowerCase().replace(/\n/, '-')}
+        scroll={false}
+      >
+        <Link fontSize="sm" opacity="0.6">
           {t}
         </Link>
       </NextLink>
@@ -62,9 +66,14 @@ const Footer = () => {
 
   return (
     <Box w="full">
-      <Container px={5} py={32} w="100%" maxW="container.xl">
+      <Container py={32} maxW="container.xl">
         <Heading as="h3" size={{ base: 'xs', md: 'sm', lg: 'md' }} mb="1rem">
-          Ready to create something remarkable?
+          <p>
+          Ready to create{' '}
+            <span style={{color: 'var(--chakra-colors-teal)'}}>
+            something remarkable?
+            </span>
+          </p>
         </Heading>
         <Button variant="teal">Get in touch</Button>
         <Box
@@ -77,11 +86,11 @@ const Footer = () => {
             <Logo boxSize={{ base: 100, md: 50 }} mb={{ base: -5, md: 0 }} />
             <Stack spacing="0">
               <Link href="tel:+6589062903">
-                <PhoneIcon color="teal" mr={1} />
+                <PhoneIcon mr={1} />
                 +65 8906 2903
               </Link>
               <Link href="mailto:hello@lumifilms.sg">
-                <EmailIcon color="teal" mr={1} />
+                <EmailIcon mr={1} />
                 hello@lumifilms.sg
               </Link>
             </Stack>

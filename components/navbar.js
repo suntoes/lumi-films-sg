@@ -9,7 +9,7 @@ import {
   MenuItem,
   MenuList,
   MenuButton,
-  IconButton,
+  IconButton
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 
@@ -30,6 +30,8 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+  const isHomeRender = path === "/" || path === "/#" ? true : false
+  const delay = isHomeRender ? 3 : 0
 
   return (
     <Box
@@ -37,20 +39,20 @@ const Navbar = props => {
       as="nav"
       w="full"
       bgImage="linear-gradient(to bottom, #22222288, #ffffff00)"
-      zIndex={2}
+      zIndex={99}
       {...props}
     >
-      <Delayed>
       <Container
         display="flex"
-        p={5}
-        w="100%"
+        py={5}
         maxW="container.xl"
         wrap="wrap"
         align="center"
         justifyContent="space-between"
       >
-        <Logo />
+        <Delayed onView={false} from="up" delay={delay}>
+          <Logo />
+        </Delayed>
 
         <Stack
           direction={{ base: 'column', md: 'row' }}
@@ -61,47 +63,61 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/#" path={path}>
-            Home
+            <Delayed onView={false} from="up" delay={delay}>
+              Home
+            </Delayed>
           </LinkItem>
           <LinkItem href="/about" path={path}>
-            About
+            <Delayed onView={false} from="up" delay={delay}>
+              About
+            </Delayed>
           </LinkItem>
           <LinkItem href="/portfolio" path={path}>
-            Portfolio
+            <Delayed onView={false} from="up" delay={delay}>
+              Portfolio
+            </Delayed>
           </LinkItem>
           <LinkItem href="/contact" path={path}>
-            Contact
+            <Delayed onView={false} from="up" delay={delay}>
+              Contact
+            </Delayed>
           </LinkItem>
-          <ThemeToggleButton />
+          <Delayed onView={false} from="up" delay={delay}>
+            <ThemeToggleButton />
+          </Delayed>
         </Stack>
         <Box display={{ base: 'flex', md: 'none' }} alignItems="center">
-          <ThemeToggleButton transform="translateY(-2px)" />
-          <Menu isLazy id="navbar-menu">
-            <MenuButton
-              as={IconButton}
-              icon={<HamburgerIcon />}
-              colorScheme="whiteAlpha"
-              variant="ghost"
-              aria-label="Options"
-            />
-            <MenuList>
-              <NextLink href="/" passHref>
-                <MenuItem as={Link}>Home</MenuItem>
-              </NextLink>
-              <NextLink href="/about" passHref>
-                <MenuItem as={Link}>About</MenuItem>
-              </NextLink>
-              <NextLink href="/portfolio" passHref>
-                <MenuItem as={Link}>Portfolio</MenuItem>
-              </NextLink>
-              <NextLink href="/contact" passHref>
-                <MenuItem as={Link}>Contact</MenuItem>
-              </NextLink>
-            </MenuList>
-          </Menu>
+          <Delayed onView={false} from="up" delay={delay}>
+            <ThemeToggleButton transform="translateY(-2px)" />
+          </Delayed>
+          <Delayed onView={false} from="up" delay={delay}>
+            <Menu isLazy id="navbar-menu">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                colorScheme="gray"
+                opacity={0.3}
+                variant="solid"
+                aria-label="Options"
+              />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>Home</MenuItem>
+                </NextLink>
+                <NextLink href="/about" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
+                </NextLink>
+                <NextLink href="/portfolio" passHref>
+                  <MenuItem as={Link}>Portfolio</MenuItem>
+                </NextLink>
+                <NextLink href="/contact" passHref>
+                  <MenuItem as={Link}>Contact</MenuItem>
+                </NextLink>
+              </MenuList>
+            </Menu>
+          </Delayed>
         </Box>
       </Container>
-      </Delayed>
     </Box>
   )
 }

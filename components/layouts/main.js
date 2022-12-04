@@ -3,7 +3,7 @@ import Head from 'next/head'
 import NavBar from '../navbar'
 import { Box } from '@chakra-ui/react'
 import Footer from '../footer'
-import Blur from '../blur'
+//import Blur from '../blur'
 //import MarryGoLoader from '../merry-go-loader'
 
 //const LazyMarryGo = dynamic(() => import('../merry-go'), {
@@ -33,10 +33,16 @@ const Main = ({ children, router }) => {
         <title>Lumi Films | Video Production</title>
       </Head>
 
-      <Blur position="fixed" opacity={0.8} style={{ filter: 'blur(60px) opacity(0.6)' }} />
-
       <NavBar path={router.asPath} />
+
+      {/*<Blur
+        position="fixed"
+        opacity={0.8}
+        style={{ filter: 'blur(60px) opacity(0.6)' }}
+      />*/}
+
       {children}
+
       <Footer />
     </Box>
   )

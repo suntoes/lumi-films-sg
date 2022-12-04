@@ -6,6 +6,7 @@ import {
   Flex,
   Spacer,
   Stack,
+  Text
 } from '@chakra-ui/react'
 
 import Paragraph from '../components/paragraph'
@@ -26,10 +27,8 @@ const Aim = () => (
       h={{ base: '400px', md: '600px' }}
       alignSelf="start"
     >
-      <Delayed from="down">
-        <Box fontSize={64}>
-          parallax
-        </Box>
+      <Delayed from="down" fromOpaque={false}>
+        <Box fontSize={64}>parallax</Box>
       </Delayed>
     </Box>
     <Flex w={{ md: '50%' }} direction="column">
@@ -39,7 +38,13 @@ const Aim = () => (
         size={{ base: 'sm', md: 'md', lg: 'lg' }}
       >
         <Delayed from="right">
-        We aim to share your moments with others
+          <p>
+          We aim to{' '}
+            <span style={{color: 'var(--chakra-colors-teal)'}}>
+            share your moments 
+            </span>
+          {' '}with others
+          </p>
         </Delayed>
       </Heading>
       <Spacer />
@@ -52,20 +57,18 @@ const Aim = () => (
         alignSelf="end"
       >
         <Delayed from="right">
-        <Paragraph>
-          Lumi Films is a film production company in Singapore. We strive to not
-          only create engaging content, but to also evoke emotions, share unique
-          moments, and create memories through the craft of video.
-          {
-            '\n\nDo you need help bringing your ideas to video? Contact us today to learn more!'
-          }
-        </Paragraph>
+          <Paragraph>
+            Lumi Films is a film production company in Singapore. We strive to
+            not only create engaging content, but to also evoke emotions, share
+            unique moments, and create memories through the craft of video.
+            {
+              '\n\nDo you need help bringing your ideas to video? Contact us today to learn more!'
+            }
+          </Paragraph>
         </Delayed>
-        <Box alignSelf={{base: 'end', md: 'start'}}>
+        <Box alignSelf={{ base: 'end', md: 'start' }}>
           <Delayed from="right" delay={0.2}>
-        <Button variant="teal" >
-          Learn more
-        </Button>
+            <Button variant="teal">Learn more</Button>
           </Delayed>
         </Box>
       </Stack>

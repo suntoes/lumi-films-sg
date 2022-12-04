@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react'
 
 import Paragraph from '../components/paragraph'
+import Delayed from '../components/delayed'
 
 const RecentWorks = () => (
   <Box
@@ -18,7 +19,7 @@ const RecentWorks = () => (
     borderRadius={25}
     color="white"
     mt={-4}
-    minW="100vw"
+    w="full"
     py={32}
     boxShadow="0px 0px 50px rgba(0, 0, 0, 0.5)"
     filter="drop-shadow(0 0 0 #00000000)"
@@ -26,8 +27,6 @@ const RecentWorks = () => (
     <Container
       display="flex"
       flexDirection={{ base: 'column-reverse', md: 'column' }}
-      w="100%"
-      px={5}
       maxW="container.xl"
     >
       <Flex direction={{ base: 'column', md: 'row-reverse' }}>
@@ -36,32 +35,45 @@ const RecentWorks = () => (
           w={{ base: '100%', md: 400, lg: 450, lg: 500 }}
           pb="1rem"
         >
-          <Box w="100%" overflow="hidden" borderRadius={10}>
-            <Image
-              w="100%"
-              _hover={{ transform: 'scale(1.2)' }}
-              transition="all .5s"
-              src="images/asset-1.jpg"
-            />
-          </Box>
+          <Delayed from="down">
+            <Box w="100%" overflow="hidden" borderRadius={10}>
+              <Image
+                w="100%"
+                _hover={{ transform: 'scale(1.2)' }}
+                transition="all .5s"
+                src="images/asset-1.jpg"
+              />
+            </Box>
+          </Delayed>
         </Box>
-        <Box display="flex" flex="1" flexDirection="column">
-          <Text display={{ base: 'none', md: 'block' }}>Recent Works</Text>
-          <Heading as="h2" size={{ base: 'sm', md: 'md', lg: 'lg' }}>
-            Shophouse Artwork
-          </Heading>
-          <Heading as="h5" fontWeight={400} fontSize="1.5rem">
-            Talking Textiles
-          </Heading>
+        <Box flex={1}>
+          <Delayed>
+            <Text display={{ base: 'none', md: 'block' }}>Recent Works</Text>
+            <Heading as="h2" size={{ base: 'sm', md: 'md', lg: 'lg' }}>
+              <p>
+              Shophouse{' '}
+                <span style={{color: 'var(--chakra-colors-teal)'}}>
+                  Artwork
+                </span>
+              </p>
+            </Heading>
+            <Heading as="h5" fontWeight={400} fontSize="1.5rem">
+              Talking Textiles
+            </Heading>
+          </Delayed>
           <Box w={{ md: '80%' }} mt={{ base: '2rem', md: '4rem' }} mb={'3em'}>
-            <Paragraph>
-              Lumi Films is a film production company in Singapore. We strive
-              not only create engaging content, but to also evoke emotions,
-              share unique moments, and create memories through the craft of
-              video.
-            </Paragraph>
+            <Delayed>
+              <Paragraph>
+                Lumi Films is a film production company in Singapore. We strive
+                not only create engaging content, but to also evoke emotions,
+                share unique moments, and create memories through the craft of
+                video.
+              </Paragraph>
+            </Delayed>
           </Box>
-          <Button variant="teal">See all works</Button>
+          <Delayed>
+            <Button variant="teal">See all works</Button>
+          </Delayed>
         </Box>
       </Flex>
       <Box>
@@ -73,12 +85,20 @@ const RecentWorks = () => (
           justify="end"
         >
           {[0, 1, 2, 3, 4].map(i => (
-            <Box key={i} overflow="hidden" maxW={{ md: '11%' }} borderRadius={10}>
-              <Image
-                src="images/asset-1.jpg"
-                _hover={{ transform: 'scale(1.2)' }}
-                transition="all .5s"
-              />
+            <Box key={i} maxW={{ md: '11%' }}>
+              <Delayed from="right" delay={0.1 * i}>
+                <Box
+                  overflow="hidden"
+                  borderRadius={10}
+                  opacity={i === 1 ? 0.4 : 1}
+                >
+                  <Image
+                    src="images/asset-1.jpg"
+                    _hover={{ transform: 'scale(1.2)' }}
+                    transition="all .5s"
+                  />
+                </Box>
+              </Delayed>
             </Box>
           ))}
         </Stack>
