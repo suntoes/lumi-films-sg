@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Image, Text } from '@chakra-ui/react'
-import styled from '@emotion/styled'
 
 const Logo = props => (
   <Link href="/" scroll={false}>
