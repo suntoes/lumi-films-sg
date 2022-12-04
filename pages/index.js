@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-
 import Hero from '../compositions/hero'
 import Aim from '../compositions/aim'
 import RecentWorks from '../compositions/recent-works'
