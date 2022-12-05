@@ -30,7 +30,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
-  const isHomeRender = path === "/" || path === "/#" ? true : false
+  const isHomeRender = path === '/' || path === '/#' ? true : false
   const delay = isHomeRender ? 3 : 0
 
   return (

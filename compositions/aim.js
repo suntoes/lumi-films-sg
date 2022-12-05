@@ -37,11 +37,11 @@ const Aim = () => (
       >
         <Delayed from="right">
           <p>
-          We aim to{' '}
-            <span style={{color: 'var(--chakra-colors-teal)'}}>
-            share your moments 
-            </span>
-          {' '}with others
+            We aim to{' '}
+            <span style={{ color: 'var(--chakra-colors-teal)' }}>
+              share your moments
+            </span>{' '}
+            with others
           </p>
         </Delayed>
       </Heading>

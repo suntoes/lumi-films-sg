@@ -69,9 +69,9 @@ const Footer = () => {
       <Container py={32} maxW="container.xl">
         <Heading as="h3" size={{ base: 'xs', md: 'sm', lg: 'md' }} mb="1rem">
           <p>
-          Ready to create{' '}
-            <span style={{color: 'var(--chakra-colors-teal)'}}>
-            something remarkable?
+            Ready to create{' '}
+            <span style={{ color: 'var(--chakra-colors-teal)' }}>
+              something remarkable?
             </span>
           </p>
         </Heading>

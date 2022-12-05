@@ -29,10 +29,8 @@ const Clients = () => (
       <Heading as="h3" size={{ base: 'sm', md: 'md', lg: 'lg' }} mb={5}>
         <Delayed>
           <p>
-          Our{' '}
-            <span style={{color: 'var(--chakra-colors-teal)'}}>
-            Clients
-            </span>
+            Our{' '}
+            <span style={{ color: 'var(--chakra-colors-teal)' }}>Clients</span>
           </p>
         </Delayed>
       </Heading>

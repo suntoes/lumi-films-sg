@@ -36,18 +36,14 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       {/* Safari Compatibility */}
-      <Box 
-        boxSize="full"
-        overflowX="hidden"
-        transform="translate3d(0, 0, 0)"
-      >
-      {/*<Blur
+      <Box boxSize="full" overflowX="hidden" transform="translate3d(0, 0, 0)">
+        {/*<Blur
         position="fixed"
         opacity={0.8}
         style={{ filter: 'blur(60px) opacity(0.6)' }}
       />*/}
 
-      {children}
+        {children}
       </Box>
 
       <Footer />
