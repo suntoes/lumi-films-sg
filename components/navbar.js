@@ -38,7 +38,7 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="full"
-      bgImage="linear-gradient(to bottom, #22222288, #ffffff00)"
+      bgImage="linear-gradient(to bottom, #22222288 0%, #ffffff00 100%)"
       zIndex={99}
       {...props}
     >
@@ -49,6 +49,7 @@ const Navbar = props => {
         wrap="wrap"
         align="center"
         justifyContent="space-between"
+        filter="drop-shadow(1px 1px 0px #22222288)"
       >
         <Delayed onView={false} from="up" delay={delay}>
           <Logo />
